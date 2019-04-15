@@ -76,7 +76,7 @@ namespace SPMEDGROUP_MANHA.Controllers
             }
         }
 
-        [HttpGet("consulta pelo Medico")]
+        [HttpGet("Medico")]
         public IActionResult GetDoMedico()
         {
             try
@@ -93,7 +93,7 @@ namespace SPMEDGROUP_MANHA.Controllers
             }
         }
 
-        [HttpPut]
+        [HttpPut("Descricao")]
         [Authorize(Roles = "3, 1")]
         public IActionResult PutDescricao(Consulta consulta)
         {
@@ -117,14 +117,11 @@ namespace SPMEDGROUP_MANHA.Controllers
                 return BadRequest(exc.Message);
             }
         }
-
-
-
-        [HttpPut]
+        
+        [HttpPut("Status")]
         [Authorize(Roles = "3")]
         public IActionResult PutStatus(Consulta consulta)
         {
-
             try
             {
                 using (SPMEDGROUPContext ctx = new SPMEDGROUPContext())
@@ -145,10 +142,6 @@ namespace SPMEDGROUP_MANHA.Controllers
             }
         }
 
-
-
-
-
-        /**/
-    }
+        
+/**/}
 }

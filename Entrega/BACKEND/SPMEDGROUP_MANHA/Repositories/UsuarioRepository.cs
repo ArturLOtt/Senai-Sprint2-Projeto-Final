@@ -26,6 +26,11 @@ namespace SPMEDGROUP_MANHA.Repositories
                 return ctx.Usuarios.ToList();
             }
         }
+
+
+
+
+
                 
         public void Cadastrar(Usuarios usuario)
         {

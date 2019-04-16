@@ -9,50 +9,49 @@ namespace SPMEDGROUP_MANHA.Repositories
 {
     public class ConsultaRepository : IConsultaRepository
     {
+
+        SPMEDGROUPContext ctx = new SPMEDGROUPContext();
+
         public void Cadastrar(Consulta consulta)
         {
-            using (SPMEDGROUPContext ctx = new SPMEDGROUPContext())
-            {
+
                 ctx.Consulta.Add(consulta);
                 ctx.SaveChanges();
-            }
+
         }
 
         public List<Consulta> Listar()
         {
             List<Consulta> jogosLista = new List<Consulta>();
-            using (SPMEDGROUPContext ctx = new SPMEDGROUPContext())
-            {
+
                 return ctx.Consulta.ToList();
-            }
+
         }
 
-        public List<Consulta> ListarPorIdMedico()
+        public List<Consulta> ListarMinhasConsultas(int pegaUsuarioId, int tipoLogado)
         {
-            List<Consulta> jogosLista = new List<Consulta>();
-            using (SPMEDGROUPContext ctx = new SPMEDGROUPContext())
+            List<Consulta> minhasConsultas = new List<Consulta>();
+
+            switch (tipoLogado)
             {
-                return ctx.Consulta.ToList();
+                case 1:
+                    TipoMedico medicoBuscado = ctx.TipoMedico.Where(m => m.IdUsuario == pegaUsuarioId).FirstOrDefault();
+
+                    minhasConsultas = ctx.Consulta.ToList().FindAll(c => c.IdMedico == medicoBuscado.Id);
+
+                    break;
+
+                case 2:
+                    ProntuarioPaciente prontuarioBuscado = ctx.ProntuarioPaciente.Where(p => p.IdUsuario == pegaUsuarioId).FirstOrDefault();
+
+                    minhasConsultas = ctx.Consulta.ToList().FindAll(c => c.IdPaciente == prontuarioBuscado.Id);
+
+                    break;
             }
+
+            return minhasConsultas;
+
         }
 
-        public List<Consulta> ListarPorIdPaciente()
-        {
-            List<Consulta> jogosLista = new List<Consulta>();
-            using (SPMEDGROUPContext ctx = new SPMEDGROUPContext())
-            {
-                return ctx.Consulta.ToList();
-            }
-        }
-
-        public void ModificarDescricao(Consulta consulta)
-        {
-
-            using (SPMEDGROUPContext ctx = new SPMEDGROUPContext())
-            {
-
-                
-            }
-        }
-    }
+/**/}
 }

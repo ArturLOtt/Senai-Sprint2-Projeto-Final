@@ -12,11 +12,9 @@ namespace SPMEDGROUP_MANHA.Interfaces
 
         void Cadastrar(Consulta consulta);
 
-        void ModificarDescricao(Consulta consulta);
+        //void ModificarDescricao(Consulta consulta);
 
-        List<Consulta> ListarPorIdMedico();
-
-        List<Consulta> ListarPorIdPaciente();
+        List<Consulta> ListarMinhasConsultas(int pegaUsuarioId, int tipoLogado);
 
     }
 }

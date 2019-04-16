@@ -42,59 +42,28 @@ namespace SPMEDGROUP_MANHA.Controllers
             }
         }
 
-        /*
 
-        [HttpGet]
-        public IActionResult listarUsuarioTipo()
-        {
-            try
-            {
 
-                using (SPMEDGROUPContext ctx = new SPMEDGROUPContext())
-                {
-
-                    var pegaUsuarioId = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
-
-                    /*
-                    var pegaOTipoPaciente = ctx.ProntuarioPaciente.Find(pegaUsuarioId.     ctx.Usuarios./*Id_usuario  { { { { aqui colocar o que recebe ao fazer login } } } } */ /*   );
-
-                /*    return Ok( /* { { { colocar aqui a lista de consulta => SequencePosition der para fazer tudo numa função só, mudar esse codigo para o ConsultaController } } } */     /*    .Usuarios.Where.Consulta.ToList()); */
-        /*
-                }
-            }
-            catch (Exception ex)
-            {
-
-                return BadRequest();
-            }
-        }
-        */
+        //[Authorize]
+        //[HttpGet("2")]
+        //public IActionResult GetPacientess()
+        //{
+        //    try
+        //    {
+        //        return Ok(UsuarioRepository.ListarPacientes());
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return BadRequest();
+        //    }
+        //}
 
 
 
 
-        /*
-
-
-                [Authorize(Roles = "3")] //Somente o paciente pode listar as próprias consultas!
-        [HttpGet("ListardoPaciente")]
-        public IActionResult ListardoPaciente()
-        {
-            try
-            {
-                int usuarioid = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
-
-                return Ok(ConsultaRepository.ListardoPaciente(usuarioid));
-            }
-            catch (Exception ex)
-            {
-                return BadRequest("Algo deu errado :/");
-            }
-        }
 
 
 
-        */
 
 
 

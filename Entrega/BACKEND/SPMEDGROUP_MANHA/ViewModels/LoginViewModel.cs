@@ -10,11 +10,11 @@ namespace SPMEDGROUP_MANHA.ViewModels
     {
 
         [Required(ErrorMessage = "Email necessario para Login")]
-        [StringLength(255, MinimumLength = 5, ErrorMessage = "O e-mail deve ter entre 5 e 255 caractéres.")]
+        [StringLength(255, MinimumLength = 4, ErrorMessage = "O e-mail deve ter entre 4 e 255 caractéres.")]
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Senha necessaria para Login")]
-        [StringLength(255, MinimumLength = 5, ErrorMessage = "A senha deve ter entre 5 e 255 caractéres.")]
+        [StringLength(255, MinimumLength = 4, ErrorMessage = "A senha deve ter entre 4 e 255 caractéres.")]
         public string Senha { get; set; }
     }
 }

@@ -10,6 +10,7 @@ namespace SPMEDGROUP_MANHA.Repositories
 {
     public class UsuarioRepository : IUsuarioRepository
     {
+        SPMEDGROUPContext ctx = new SPMEDGROUPContext();
 
         public Usuarios BuscarPorEmailESenha(LoginViewModel login)
         {
@@ -27,11 +28,11 @@ namespace SPMEDGROUP_MANHA.Repositories
             }
         }
 
-
-
-
-
-                
+        public Usuarios BuscarPorId(int usuarioId)
+        {
+            return ctx.Usuarios.Find(usuarioId);
+        }
+        
         public void Cadastrar(Usuarios usuario)
         {
 

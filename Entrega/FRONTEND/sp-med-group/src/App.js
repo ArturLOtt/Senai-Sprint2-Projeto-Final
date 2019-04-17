@@ -9,6 +9,10 @@ const hospe = {
 
 class App extends Component {
   render() {
+
+    <TopLine></TopLine>
+
+
     return (
       <div className="App">
         
@@ -16,6 +20,7 @@ class App extends Component {
 <div style={hospe}></div>
 
 
+<BottonLine></BottonLine>
       </div>
     );
   }

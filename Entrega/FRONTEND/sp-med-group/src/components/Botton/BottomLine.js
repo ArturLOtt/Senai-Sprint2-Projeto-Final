@@ -14,8 +14,8 @@ function BottomLine() {
                       <p className="supreme">Faça seu cadastro</p>
                       <p className="supreme">Acesse sua conta</p>
                       <p className="supreme">SPMEDGroup App</p>
-                      <p style={{color: 'cornflowerblue'}}>Facebook</p>
-                      <p style={{color: 'darkmagenta'}}>Instagram</p>
+                      <a href="#"><i className="fab fa-facebook-square"></i></a>
+                      <a href="#"><i className="fab fa-instagram"></i></a>
                       <p className="supreme">11 8877-6655</p>
                       <p className="supreme">Entre em contato</p>
                       <p className="supreme">Hospital SPMED</p>

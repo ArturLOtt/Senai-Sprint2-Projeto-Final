@@ -10,7 +10,19 @@ class AdminPage extends Component {
 <div>
 <TopLine></TopLine>
 <div>
+
+
+
+
+
+
     <p>Admin</p>
+
+            <hr/>
+            
+
+
+
 </div>
 <BottonLine></BottonLine>
 </div>

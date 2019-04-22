@@ -12,11 +12,9 @@ class App extends Component {
 <TopLine></TopLine>
         <div>
           <div className="input-group mb-3" style={{backgroundColor: 'royalblue'}}>
-            <input type="text" className="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2" />
+            <input type="text" className="form-control" placeholder="Faça uma pesquisa" aria-label="Recipient's username" aria-describedby="button-addon2" />
             <div className="input-group-append">
-              <button className="btn btn-outline-secondary" type="button" id="button-addon2">
-                Button
-              </button>
+              <button className="btn btn-secondary" type="submit" id="button-addon2" style={{ color: 'black'}}><i className="fas fa-search"></i></button>
             </div>
           </div>
           <div className="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
@@ -153,7 +151,7 @@ class App extends Component {
             <p> Alameda Barão de Limeira, 539 - Santa Cecília, São Paulo - SP, 01202-001 </p>
           </div>
         <div>
-          <img>mapa</img>
+          <img src="./assets/img/sao-paulo-map.jpg" height="42" width="100%"></img>
         </div>
         </div>
 <BottonLine></BottonLine>

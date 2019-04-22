@@ -7,7 +7,7 @@ import Login from './pages/Login/Login';
 import AdminPage from './pages/Admin/AdminPage';
 import DoctorPage from './pages/Doctor/DoctorPage';
 import PatientPage from './pages/Patient/PatientPage';
-import NotFound from "./pages/NotFound/Notfound";
+import NotFound from "./pages/NotFound/NotFound";
 import * as serviceWorker from './serviceWorker';
 
 import {usuarioAutenticado} from "./services/auth";

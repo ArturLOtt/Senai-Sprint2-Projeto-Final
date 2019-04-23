@@ -28,7 +28,8 @@ const routing = (
       <Switch>
         <Route exact path="/" component={App} />
         <Route  path="/login" component={Login} />
-        <Permissao path="/admin" component={AdminPage} />
+        {/* <Permissao path="/admin" component={AdminPage} /> */}
+        <Route path="/admin" component={AdminPage} />
         <Permissao path="/medico" component={DoctorPage} />
         <Permissao path="/do-paciente" component={PatientPage} />
         <Route component={NotFound}/>    

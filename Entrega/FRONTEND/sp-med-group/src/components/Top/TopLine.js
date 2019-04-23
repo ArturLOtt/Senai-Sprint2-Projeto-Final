@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import iMedctellus from "../../assets/img/iMedctellus.png";
 
 function TopLine() {
   return (
@@ -14,7 +15,7 @@ function TopLine() {
           <img /> PT-BR
           <img /> EN
           <img /> SPANISH
-          <img src="../../assets/img/italy-hospital-image.png" height="42" width="42" /> Italy docs
+          <img src="../../assets/img/iMedctellus.png" height="42" width="42" /> Italy docs
           <img /> S2
           <p>SPMED Group</p>
         </div>

@@ -27,12 +27,16 @@ efetuarLogin(event){
       if(data.status === 200){
           console.log(data);
           localStorage.setItem("usuario", data.data.token);
+          // localStorage.setItem("tipoUsuario", data.data.token);
           // tipoUsuario = usuarioAutenticado.
 
 
 
 
           // this.props.history.push("/listar");
+
+
+          this.props.history.push("/");
       } 
   })
   .catch(erro => { this.setState({ erroMensagem : 'Email ou senha inválido'});  })
@@ -45,27 +49,27 @@ efetuarLogin(event){
 <TopLine></TopLine>
 <div>
 
-    <i class="far fa-user fa-7x"></i>
-    <form class="form-signin" onSubmit={this.efetuarLogin.bind(this)}>
-              <div class="form-label-group">
-              <label for="inputEmail"></label>
+    <i className="far fa-user fa-7x"></i>
+    <form className="form-signin" onSubmit={this.efetuarLogin.bind(this)}>
+              <div className="form-label-group">
+              <label htmlFor="inputEmail"></label>
                 <input 
                   type="email"
                   id="inputEmail"
-                  class="form-control"
+                  className="form-control"
                   placeholder="Email address"
                   value={this.state.email}
                   onChange={this.atualizarStateEmail.bind(this)}
-                  required autofocus/>
+                  required autoFocus/>
 
               </div>
 
-              <div class="form-label-group">
-                <label for="inputPassword"></label>
+              <div className="form-label-group">
+                <label htmlFor="inputPassword"></label>
                 <input 
                 type="password" 
                 id="inputPassword" 
-                class="form-control" 
+                className="form-control" 
                 placeholder="Password"
                 value={this.state.pass}
                 onChange={this.atualizarStateSenha.bind(this)} 
@@ -74,7 +78,7 @@ efetuarLogin(event){
 
               <p style={{ color: 'blue'}}>Esqueceu a Senha?</p>
 
-              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
+              <button className="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
 
               <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Available_on_the_App_Store_(black)_SVG.svg"></img>
 

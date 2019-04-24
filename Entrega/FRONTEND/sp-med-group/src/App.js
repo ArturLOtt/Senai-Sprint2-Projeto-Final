@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import BottonLine from './components/Botton/BottomLine';
 import TopLine from './components/Top/TopLine';
 import './App.css';
+import saoPauloMap from './assets/img/saoPauloMap.jpg';
 
 class App extends Component {
   render() {
@@ -151,7 +152,7 @@ class App extends Component {
             <p> Alameda Barão de Limeira, 539 - Santa Cecília, São Paulo - SP, 01202-001 </p>
           </div>
         <div>
-          <img src="./assets/img/sao-paulo-map.jpg" height="42" width="100%"></img>
+          <img src={saoPauloMap} height="300px" width="100%"></img>
         </div>
         </div>
 <BottonLine></BottonLine>

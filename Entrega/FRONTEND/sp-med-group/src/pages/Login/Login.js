@@ -20,12 +20,12 @@ efetuarLogin(event){
   event.preventDefault();
   
   Axios.post("http://localhost:5000/api/login", {
-     email : this.state.email,
+     email: this.state.email,
      senha: this.state.senha
   })
   .then(data => {
       if(data.status === 200){
-          console.log(data);
+          // console.log(data);
           localStorage.setItem("usuario", data.data.token);
           // localStorage.setItem("tipoUsuario", data.data.token);
           // tipoUsuario = usuarioAutenticado.
@@ -33,10 +33,10 @@ efetuarLogin(event){
 
 
 
-          // this.props.history.push("/listar");
+          // this.props.history.push("/");
+          this.props.history.push("/admin");
 
 
-          this.props.history.push("/");
       } 
   })
   .catch(erro => { this.setState({ erroMensagem : 'Email ou senha inválido'});  })

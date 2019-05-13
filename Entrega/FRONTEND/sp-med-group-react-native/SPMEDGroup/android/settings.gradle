@@ -1,0 +1,3 @@
+rootProject.name = 'SPMEDGroup'
+
+include ':app'

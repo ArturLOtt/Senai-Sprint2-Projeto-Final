@@ -1,8 +1,19 @@
 import React, { Component } from "react";
-import { AsyncStorage } from "react-native";
+import { 
+    StyleSheet,
+    View,
+    Text,
+    TextInput,
+    TouchableOpacity,
+    AsyncStorage
+ } from "react-native";
+
 import apiConection from "../services/apiConection"
 
 class Login extends Component {
+    static navigationOptions = {
+        header: null
+      };
         constructor(props) {
             super(props);
             this.state = { 
@@ -12,11 +23,11 @@ class Login extends Component {
         }
     }
 
-    static navigationOptions = {
-        title: 'Login'
-    };
+    // static navigationOptions = {
+    //     title: 'Login'
+    // };
 
-    loginAction = async() => {
+    _loginAction = async() => {
         try {
             const post = await apiConection.post("/login", {
                 email: this.state.email,
@@ -24,7 +35,7 @@ class Login extends Component {
             });
                 const tokenUsuario = post.data.token;
                 await AsyncStorage.setItem("user-token", tokenUsuario);
-                // this.props.navigation.navigate("Projetos propostos");
+                this.props.navigation.navigate("MainNavigator");
             } catch (erro) {
                 erro = this.state.mensagemErro;
                 console.warn(erro);
@@ -33,7 +44,7 @@ class Login extends Component {
 
     authenticationAction() {
         if (this.state.token !== null) {
-            // this.props.navigation.navigate("Projetos propostos");
+            this.props.navigation.navigate("MainNavigator");
         }
     }
 
@@ -54,7 +65,7 @@ class Login extends Component {
                     onChangeText={senha => this.setState({ senha })}
                 />
                 <TouchableOpacity
-                    onPress={this.loginAction} >
+                    onPress={this._loginAction} >
                         <Text>Entrar</Text>
                 </TouchableOpacity>
                 </View>

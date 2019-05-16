@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Text, View, TouchableOpacity, AsyncStorage } from 'react-native';
 
 class Patient extends Component {
     constructor(){
@@ -13,9 +14,6 @@ class Patient extends Component {
             descricao: ""
         }
     }
-
-
-
 
     listaConsultas = async () => {
         const token = await AsyncStorage.getItem("user-token")
@@ -35,6 +33,11 @@ class Patient extends Component {
                 <View>
                 {this.state.listaConsultas.map(function (consultas) {
                                 return(
+                                    <View>
+                                        <Text>foi paciente</Text>
+                                        <TouchableOpacity
+                                        onPress={this.listaConsultas}
+                                        > Clique para ver suas consultas</TouchableOpacity>
                                     <View key={consultas.id}>
                                         <Text>{consultas.idStatusConsulta}</Text>
                                         <Text>{consultas.dataAgendamento}</Text>
@@ -42,17 +45,14 @@ class Patient extends Component {
                                         <Text>{consultas.idPaciente}</Text>
                                         <Text>{consultas.descricao}</Text>
                                     </View>
+
+                                    </View>
                                 );
                             })}
                 </View>
             </View>
         )
     }
-
-
-
-
-
 }
 
 export default Patient;

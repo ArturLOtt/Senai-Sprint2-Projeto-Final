@@ -1,0 +1,56 @@
+.container {
+    flex: 1;
+    flex-direction: 'column';
+    justify-content: 'center';
+    align-items: 'center';
+    background-color: '#C8E3CF';
+}
+
+image {
+    width: 180;
+    height: 180;
+    margin: '5%';
+    padding: '5%';
+}
+
+input {
+    width: '80%';
+    color: 'black';
+    border-bottom-color: '#fff';
+    border-bottom-width: 2;
+    margin-bottom: 30;
+    padding-left: 10;
+    padding-bottom: 1;
+}
+
+button {
+    align-items: 'center';
+    justify-content: 'center';
+    width: '45%';
+    height: 55;
+    border-radius: 10;
+}
+
+.buttonEnabled {
+    background-color: '#5C9E6C';
+}
+
+.buttonDisabled {
+    background-color: '#C8E3CF';
+}
+
+.buttonText {
+    color: '#fff';
+    font-size: 20;
+    font-weight: '900';
+}
+
+.loading {
+    margin-bottom: 30;
+}
+
+.disconnected {
+    color: 'red';
+    margin-bottom: 10;
+}
+

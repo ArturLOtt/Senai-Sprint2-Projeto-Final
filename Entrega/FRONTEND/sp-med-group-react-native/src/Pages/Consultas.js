@@ -20,30 +20,30 @@ export default class Consultas extends Component {
         }
     }
 
-    componentDidMount() {
-        this._BuscarDados()
-    }
+    // componentDidMount() {
+    //     this._BuscarDados()
+    // }
 
-    _BuscarDados = async () => {
-        const token = await AsyncStorage.getItem('userToken')
-        const role = await AsyncStorage.getItem('userCredential')
-        this.setState({ token })
-        this.setState({ role })
-        // console.warn(token)
-        // console.warn(this.state.role)
+    // _BuscarDados = async () => {
+    //     const token = await AsyncStorage.getItem('userToken')
+    //     const role = await AsyncStorage.getItem('userCredential')
+    //     this.setState({ token })
+    //     this.setState({ role })
+    //     // console.warn(token)
+    //     // console.warn(this.state.role)
 
-        this._FazerRequest()
-    }
+    //     this._FazerRequest()
+    // }
 
-    _FazerRequest = async () => {
-        const resposta = await api.get('/consultas', {
-            headers: {
-                'Authorization': 'Bearer ' + (this.state.token)
-            }
-        })
+    // _FazerRequest = async () => {
+    //     const resposta = await api.get('/consultas', {
+    //         headers: {
+    //             'Authorization': 'Bearer ' + (this.state.token)
+    //         }
+    //     })
 
-        this.setState({listaConsultas: resposta.data})
-    } 
+    //     this.setState({listaConsultas: resposta.data})
+    // } 
 
     render() {
         return (
@@ -51,14 +51,22 @@ export default class Consultas extends Component {
                 <ScrollView style={styles.scroll}>
                     {this.state.listaConsultas.map(chave => {
                         // console.warn(chave)
-                        return <ConsultaCard 
-                                    especialidade={chave.especialidade}
-                                    medico={chave.nomeMedico}
-                                    paciente={chave.nomePaciente}
-                                    data={chave.dataConsulta}
-                                    hora={chave.horaConsulta}
-                                    status={chave.status}
+                        return (
+                        
+                        <View>
+                            <Text>consultas</Text>
+                        
+                        <ConsultaCard 
+                                    // especialidade={chave.especialidade}
+                                    // medico={chave.nomeMedico}
+                                    // paciente={chave.nomePaciente}
+                                    // data={chave.dataConsulta}
+                                    // hora={chave.horaConsulta}
+                                    // status={chave.status}
                                 />
+                        </View>
+
+                        )
                     })}
                 </ScrollView>
             </View>
@@ -68,7 +76,7 @@ export default class Consultas extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'white',
+        backgroundColor: 'royalblue',
         flex: 1,
         flexDirection: 'column',
         justifyContent: 'center',

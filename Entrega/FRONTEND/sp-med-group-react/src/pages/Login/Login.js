@@ -19,22 +19,17 @@ atualizarStateSenha(event){  this.setState({ senha : event.target.value}); }
 efetuarLogin(event){
   event.preventDefault();
   
-  Axios.post("http://localhost:5000/api/login", {
+  Axios.post("https://spmedgroups2.azurewebsites.net/api/login", {
      email: this.state.email,
      senha: this.state.senha
   })
   .then(data => {
       if(data.status === 200){
           // console.log(data);
-          localStorage.setItem("usuario", data.data.token);
-          // localStorage.setItem("tipoUsuario", data.data.token);
+          localStorage.setItem("usuario-spmedgroup",
+           data.data.token);
           // tipoUsuario = usuarioAutenticado.
-
-
-
-
-          // this.props.history.push("/");
-          this.props.history.push("/admin");
+          this.props.history.push("/do-paciente");
 
 
       } 

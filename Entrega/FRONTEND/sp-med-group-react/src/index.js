@@ -7,6 +7,7 @@ import Login from './pages/Login/Login';
 import AdminPage from './pages/Admin/AdminPage';
 import DoctorPage from './pages/Doctor/DoctorPage';
 import PatientPage from './pages/Patient/PatientPage';
+import LocalizacaoPage from './pages/Localizacao/Localizacao';
 import NotFound from "./pages/NotFound/NotFound";
 import * as serviceWorker from './serviceWorker';
 
@@ -32,6 +33,7 @@ const routing = (
         <Route path="/admin" component={AdminPage} />
         <Permissao path="/medico" component={DoctorPage} />
         <Permissao path="/do-paciente" component={PatientPage} />
+        <Permissao path="/localizacao" component={LocalizacaoPage} />
         <Route component={NotFound}/>    
       </Switch>
     </div>

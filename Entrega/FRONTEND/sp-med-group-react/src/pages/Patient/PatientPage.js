@@ -5,11 +5,11 @@ import TopLine from '../../components/Top/TopLine';
 
 class PatientPage extends Component {
     constructor(props) {
-    super(props);
-    this.state = {
-        listaPacientes: []
+        super(props);
+        this.state = {
+            listaPacientes: []
+        }
     }
-}
 
     componentDidMount() {
         this.CarregarPacientes();

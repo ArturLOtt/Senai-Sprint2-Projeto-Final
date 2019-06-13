@@ -1,10 +1,38 @@
 .salmon{
     background-color: darksalmon;
-
 }
 
 .darkblueTop{
-    background-color: darkblue;
+    background-color: #2a629b;
     width: 100%;
     height: 70px;
 }
+
+.wrapper{
+    display: grid;
+    grid-template-rows: [row] auto [row] auto [row];
+}
+
+.grid-item {
+    padding: 20px;
+    grid-row: row;
+}
+
+.subitem{
+    padding: 20px;
+}
+
+.green-tittle{
+    color: #81df99;
+    font-weight: 400;
+    font-size: 10em;
+    text-shadow: -1px 0 #2a629b, 0 1px #2a629b, 1px 0 #2a629b, 0 -1px #2a629b;
+}
+
+.blanka{
+    background-color: white;
+    opacity: 0.5;
+    height: 400px;
+    width: 100%;
+}
+

@@ -19,6 +19,39 @@
   color: white;
 }
 
+.white-border{
+  background-color: white;
+  color: black;
+  border: 1px solid #81df99;
+}
+
+.white-border:hover{
+  background-color: #81df99;
+  border: 1px solid #81df99;
+}
+
+
+
+
+
+
+
+
+.darkblue{
+  background-color: #2a629b;
+}
+
+.sidenav {
+  height: 100%;
+  width: 300px;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+
 .App-link {
   color: #61dafb;
 }

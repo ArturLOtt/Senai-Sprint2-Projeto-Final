@@ -1,0 +1,17 @@
+
+
+
+.darkblueBotton{
+    background-color: #2a629b;
+}
+
+
+.wrapper{
+    display: grid;
+}
+
+.grid-item {
+    grid-row-start: 1;
+    grid-row-end: 6;
+    color: white;
+  }

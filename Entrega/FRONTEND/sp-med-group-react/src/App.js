@@ -12,7 +12,7 @@ class App extends Component {
 
 <TopLine></TopLine>
         <div>
-          <div className="input-group mb-3" style={{backgroundColor: 'royalblue'}}>
+          <div className="input-group mb-3">
             <input type="text" className="form-control" placeholder="Faça uma pesquisa" aria-label="Recipient's username" aria-describedby="button-addon2" />
             <div className="input-group-append">
               <button className="btn btn-secondary" type="submit" id="button-addon2" style={{ color: 'black'}}><i className="fas fa-search"></i></button>
@@ -20,27 +20,27 @@ class App extends Component {
           </div>
           <div className="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
             <div className="btn-group mr-2" role="group" aria-label="First group">
-              <button type="button" className="btn btn-secondary" data-toggle="collapse" data-target="#collapseABoutUs" aria-expanded="false" aria-controls="collapseABoutUs">
+              <button type="button" className="btn btn-secondary white-border" data-toggle="collapse" data-target="#collapseABoutUs" aria-expanded="false" aria-controls="collapseABoutUs">
                 Sobre Nós
               </button>
             </div>
             <div className="btn-group mr-2" role="group" aria-label="Second group">
-              <button type="button" className="btn btn-secondary" data-toggle="collapse" data-target="#collapsePacient" aria-expanded="false" aria-controls="collapsePacient">
+              <button type="button" className="btn btn-secondary white-border" data-toggle="collapse" data-target="#collapsePacient" aria-expanded="false" aria-controls="collapsePacient">
                 Paciente
               </button>
             </div>
             <div className="btn-group mr-2" role="group" aria-label="Third group">
-              <button type="button" className="btn btn-secondary" data-toggle="collapse" data-target="#collapseExams" aria-expanded="false" aria-controls="collapseExams">
+              <button type="button" className="btn btn-secondary white-border" data-toggle="collapse" data-target="#collapseExams" aria-expanded="false" aria-controls="collapseExams">
                 Exames
               </button>
             </div>
             <div className="btn-group mr-2" role="group" aria-label="Fourth group">
-              <button type="button" className="btn btn-secondary" data-toggle="collapse" data-target="#collapseLocation" aria-expanded="false" aria-controls="collapseLocation">
+              <button type="button" className="btn btn-secondary white-border" data-toggle="collapse" data-target="#collapseLocation" aria-expanded="false" aria-controls="collapseLocation">
                 Unidades
               </button>
             </div>
             <div className="btn-group mr-2" role="group" aria-label="Fifth group">
-              <button type="button" className="btn btn-secondary" data-toggle="collapse" data-target="#collapsePartners" aria-expanded="false" aria-controls="collapsePartners">
+              <button type="button" className="btn btn-secondary white-border" data-toggle="collapse" data-target="#collapsePartners" aria-expanded="false" aria-controls="collapsePartners">
                 Convenios
               </button>
             </div>
@@ -81,7 +81,7 @@ class App extends Component {
             </div>
           </div>
           <div className="card">
-            <div className="card-body" style={{backgroundColor: 'darkblue'}}>
+            <div className=" darkblue sidenav">
               <h2>Departamentos</h2>
               <p>ACUPUNTURA</p>
               <p>ANESTESIOLOGIA</p>
